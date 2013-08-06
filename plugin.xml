@@ -22,10 +22,6 @@
             <clobbers target="window.tabbar" />
         </js-module>
 
-        <js-module src="www/logger.js" name="logger">
-            <clobbers target="cordova.logger" />
-        </js-module>
-
 	<header-file src="src/ios/TabBar.h" />
 	<source-file src="src/ios/TabBar.m" />
 
