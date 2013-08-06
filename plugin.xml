@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="ru.dextra.cordova.tabbar"
+      version="0.1.0">
+
+    <name>TabBar</name>
+    <description>Cordova TabBar Plugin</description>
+    <license>Apache</license>
+    <keywords>cordova,tabbar</keywords>
+
+    <!-- ios -->
+    <platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+		<feature name="TabBar">
+			<param name="ios-package" value="TabBar"/>
+		</feature>
+        </config-file>
+
+        <js-module src="www/TabBar.js" name="tabbar">
+            <clobbers target="window.tabbar" />
+        </js-module>
+
+        <js-module src="www/logger.js" name="logger">
+            <clobbers target="cordova.logger" />
+        </js-module>
+
+	<header-file src="src/ios/TabBar.h" />
+	<source-file src="src/ios/TabBar.m" />
+
+    </platform>
+
+</plugin>
